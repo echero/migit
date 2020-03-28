@@ -1,5 +1,7 @@
 package ejercicio2Javier;
 
+//modificacion sobre tu clase..
+
 public class Atleta {
 	private int numero;
 	private float tiempo;
