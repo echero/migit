@@ -31,7 +31,4 @@ public class Anio {
 	public void setCantidadDias(int[] cantidadDias) {
 		this.cantidadDias = cantidadDias;
 	}
-	
-	
-	
 }

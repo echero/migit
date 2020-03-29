@@ -39,8 +39,7 @@ public class Main {
 			System.out.println("Días transcurridos: " + (fecha.diasTranscurridosTotal(mes, dia)));
 			
 		}while(continuar());
-		
-		
+			
 	}
 
 }
