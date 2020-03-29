@@ -30,13 +30,15 @@ public class Main {
 	}
 	
 	public static void main(String[] args) {
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apï¿½ndice de mï¿½todo generado automï¿½ticamente
 		Anio fecha=new Anio();
 		
 		do {
 			int mes=pedirNumeroEntre("Ingrese mes:",1,12);
+			System.out.println("Mes: "+fecha.getNombreDelMes(mes));
 			int dia=pedirNumeroEntre("Ingrese dia:",1,30);
-			System.out.println("Días transcurridos: " + (fecha.diasTranscurridosTotal(mes, dia)));
+			System.out.println("Cantidad de dias transcurrido en el aÃ±o antes de empezar el mes: "+fecha.diasTranscurridos(mes));
+			System.out.println("Dias transcurridos: " + (fecha.diasTranscurridosTotal(mes, dia)));
 			
 		}while(continuar());
 			
