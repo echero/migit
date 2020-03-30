@@ -1,17 +1,10 @@
 package ejercicio1Javier;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Test {
 	public static Scanner input = new Scanner(System.in);
-	public static void comprueba(String variable, String mje) {
-		if (variable != null)
-			System.out.println(variable + " " + mje);
-		else
-			System.out.println("No existe el integrante indicado");
-	}
-
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int opcion;
@@ -20,7 +13,7 @@ public class Test {
 		Grupo g = new Grupo(cadena);
 		do {
 			
-			opcion=ingreseNumero(1, 10, menu());
+			opcion=ingreseNumero(0, 9, menu());
 			switch (opcion) {
 			case 1:
 				System.out.println(g.getNombre());
@@ -58,7 +51,7 @@ public class Test {
 				break;
 			}
 			System.out.println("\n"+"\n");
-		}while(opcion!=9);
+		}while(opcion!=0);
 		
 		input.close();
 
@@ -72,7 +65,7 @@ public class Test {
 				+ "6 - Remover integrante por nombre \n"
 				+ "7 - Ver datos del grupo \n"
 				+ "8 - Remover todos los integrantes \n"
-				+ "9 - Salir \n"
+				+ "0 - Salir \n"
 				+ "Ingrese opcion: ";
 	}
 	public static int ingreseNumero(int min, int max, String mje) {
