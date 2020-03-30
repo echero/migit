@@ -1,23 +1,23 @@
-package ejercico5Javier;
+package ejercicio4Javier;
 
 import java.util.Scanner;
 
 public class Test {
-	public static Scanner input = new Scanner(System.in);
+	private static Scanner input = new Scanner(System.in);
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int dia;
 		int mes;
-		AnioV2 anio = new AnioV2();
+		Anio a1 = new Anio();
 		do {
 			mes = validaNumero(1, 12, "Ingrese numero de mes entre 1 y 12: ", "Error, ");
-			dia = validaNumero(1, anio.getDiasMes(mes), "Ingrese numero de dia del mes: ",
-					"Error, el mes elegido solo tiene " + anio.getDiasMes(mes) + " dias");
+			dia = validaNumero(1, a1.getDiasMes(mes), "Ingrese numero de dia del mes: ",
+					"Error, el mes elegido solo tiene " + a1.getDiasMes(mes) + " dias");
 			System.out.println(
-					"El numero de mes ingresado fue " + mes + ", que corresponde a " + anio.getNombreDelMes(mes));
+					"El numero de mes ingresado fue " + mes + ", que corresponde a " + a1.getNombreDelMes(mes));
 			System.out.println("Desde el comienzo del año a la fecha " + dia + "/" + mes + " han pasado "
-					+ (anio.diasTranscurridos(mes) + dia) + " dias");
+					+ (a1.diasTranscurridos(mes) + dia) + " dias");
 		} while (pregunta());
 
 		input.close();
