@@ -1,6 +1,7 @@
 package ejercicio4Javier;
 
-//import java.util.Arrays;
+//Lo comentado es como se resolvió el ejercicio antes de la consigna, acerca de si
+// ¿hay alguna manera que evitar que el cálculo de los días transcurridos se haga permanentemente? 
 
 public class Anio {
 	private String[] meses;

@@ -2,24 +2,37 @@
 <class-diagram version="1.2.4" icons="true" automaticImage="JPEG" always-add-relationships="false" 
   generalizations="true" realizations="true" associations="true" dependencies="false" nesting-relationships="true" 
   router="FAN">  
-  <class id="1" language="java" name="ejercicio4Javier.Anio" project="EjerciciosGit" 
-    file="/EjerciciosGit/src/ejercicio4Javier/Anio.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="171" width="163" x="31" y="-49"/>    
+  <enumeration id="1" language="java" name="ejercicio5.Anio.Meses" project="EjerciciosGit" 
+    file="/EjerciciosGit/src/ejercicio5/Anio.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="297" width="125" x="-6" y="154"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </enumeration>  
+  <class id="2" language="java" name="ejercicio5.Anio" project="EjerciciosGit" 
+    file="/EjerciciosGit/src/ejercicio5/Anio.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="189" width="183" x="-6" y="-75"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="2" language="java" name="ejercicio4Javier.Test" project="EjerciciosGit" 
-    file="/EjerciciosGit/src/ejercicio4Javier/Test.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="153" width="200" x="361" y="-37"/>    
+  <class id="3" language="java" name="ejercicio5.Main" project="EjerciciosGit" 
+    file="/EjerciciosGit/src/ejercicio5/Main.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="153" width="190" x="296" y="-33"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
+  <nesting id="4">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="1"/>  
+  </nesting>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    
