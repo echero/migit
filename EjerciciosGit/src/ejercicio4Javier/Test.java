@@ -16,7 +16,7 @@ public class Test {
 					"Error, el mes elegido solo tiene " + a1.getDiasMes(mes) + " dias");
 			System.out.println(
 					"El numero de mes ingresado fue " + mes + ", que corresponde a " + a1.getNombreDelMes(mes));
-			System.out.println("Desde el comienzo del año a la fecha " + dia + "/" + mes + " han pasado "
+			System.out.println("Desde el comienzo del aÃ±o a la fecha " + dia + "/" + mes + " han pasado "
 					+ (a1.diasTranscurridos(mes) + dia) + " dias");
 		} while (pregunta());
 
