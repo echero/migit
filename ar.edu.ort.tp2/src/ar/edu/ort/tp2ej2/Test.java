@@ -1,4 +1,8 @@
-package ar.edu.ort.tp2ej1;
+package ar.edu.ort.tp2ej2;
+
+import ar.edu.ort.tp2ej1.NumeroTelefonico;
+import ar.edu.ort.tp2ej1.Persona;
+import ar.edu.ort.tp2ej1.TipoDeLinea;
 
 public class Test {
 
@@ -13,10 +17,10 @@ public class Test {
 		p.agregarTelefono(num1);
 		p.agregarTelefono(num2);
 		p.agregarTelefono(num3);
-
-		p.mostrarTodo();
-
-
+		p.agregarMascota("Pluto", "Perro");
+		p.agregarMascota("Felix", "Gato");
+		p.agregarMascota("Bugs", "Conejo");
+		p.mostrarTodoConMascota();
 	}
 
 }
