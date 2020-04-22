@@ -1,4 +1,4 @@
-package ejercicio3;
+package ejercicio3_tp1;
 
 public class Competidor {
 	private String nombre;
