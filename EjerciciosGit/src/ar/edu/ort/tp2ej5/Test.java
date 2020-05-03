@@ -12,7 +12,7 @@ public class Test {
 		ed.agregarDpto(2,"B");
 		Persona p1 = new Persona("Arturo", "Roman", 53);
 		Persona p2 = new Persona("Mónica", "Gaztambide", 35);
-		Persona p3 = new Persona("Roberto", "Alfaro", 68);
+		Persona p3 = new Persona("Lorena", "Flurin", 23);
 		Mueble m1 = new Mueble("Mesa", "Madera", Color.MARRON);
 		Mueble m2 = new Mueble("Mesada", "Mármol", Color.ROJO);
 		Mueble m3 = new Mueble("Perchero", "Metal", Color.NEGRO);
@@ -23,10 +23,12 @@ public class Test {
 		ed.agregarMueble(4, "C", m2);
 		ed.agregarMueble(4, "C", m3);
 		ed.agregarMueble(4, "C", m4);
-		ed.agregarMueble(2, "B", m2);
-		ed.agregarMueble(2, "B", m3);
-		ed.agregarPersona(2, "B", p3);
+		ed.agregarDpto(5, "A");
+		ed.agregarPersona(5, "A", p3);
+		ed.mostrarDptos();		
+		ed.realizarMudanza(4, "C", 2, "B");
 		ed.mostrarDptos();
-		
+		ed.realizarMudanza(5,"A" , 4, "C");
+		ed.mostrarDptos();
 	}
 }
