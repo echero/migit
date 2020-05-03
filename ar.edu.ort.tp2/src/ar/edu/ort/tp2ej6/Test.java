@@ -1,4 +1,4 @@
-package ar.edu.ort.tp2.ej6;
+package ar.edu.ort.tp2ej6;
 //comentario
 import java.util.ArrayList;
 
