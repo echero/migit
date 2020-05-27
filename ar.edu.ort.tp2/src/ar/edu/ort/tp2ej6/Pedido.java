@@ -19,8 +19,9 @@ public class Pedido {
 
 	@Override
 	public String toString() {
-		return "Pedido [nroCompra=" + nroCompra + ", fechaCompra=" + fechaCompra + ", libro=" + libro + ", cliente="
-				+ cliente + "]";
+		//return "Pedido [nroCompra=" + nroCompra + ", fechaCompra=" + fechaCompra + ", libro=" + libro + ", cliente="
+		//		+ cliente + "]";
+		return nroCompra + "\t" + fechaCompra + "\t" + libro + " | " + cliente;
 	}
 	
 	
