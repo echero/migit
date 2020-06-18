@@ -47,7 +47,8 @@ public class Stock {
 
 	@Override
 	public String toString() {
-		return "Stock [libro=" + libro + ", cantdidadDisponible=" + cantdidadDisponible + "]";
+		//return "Stock [libro=" + libro + ", cantdidadDisponible=" + cantdidadDisponible + "]";
+		return libro + "\t" + cantdidadDisponible;
 	}
 	
 }

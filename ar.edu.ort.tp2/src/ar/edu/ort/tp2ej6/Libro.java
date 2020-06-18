@@ -21,7 +21,8 @@ public class Libro {
 
 	@Override
 	public String toString() {
-		return "Libro [Autor=" + Autor + ", titulo=" + titulo + ", editorial=" + editorial + "]";
+		//return "Libro [Autor=" + Autor + ", titulo=" + titulo + ", editorial=" + editorial + "]";
+		return titulo + " | " + Autor + "\t\t\t" + editorial;
 	}
 	
 	

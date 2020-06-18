@@ -21,7 +21,7 @@ public class Main {
 		pedido.agregarCliente(clienteUno);
 		nPedidosPendientes.add(pedido);
 		pedido.procesarPedidos(nPedidosPendientes);
-		
+		pedido.mostrarPedidosProcesados();
 		System.out.println("Lista de pedidos Confirmados: ");
 		System.out.println();
 		
