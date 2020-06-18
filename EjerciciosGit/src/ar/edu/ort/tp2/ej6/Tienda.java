@@ -85,9 +85,9 @@ public class Tienda {
 			}
 	}
 	public void mostrarStock() {
-		System.out.println("Catálogo:");
+		System.out.println("Catï¿½logo:");
 		if(lStock.size()<=0)
-			System.out.println("Vacío");
+			System.out.println("Vacï¿½o");
 		else
 			for (Stock libro : lStock) {
 				System.out.println(libro);

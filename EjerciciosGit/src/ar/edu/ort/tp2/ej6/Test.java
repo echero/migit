@@ -8,14 +8,14 @@ public class Test {
 		// TODO Auto-generated method stub
 		ArrayList<Libro> lLibros = new ArrayList<Libro>();
 		lLibros.add(new Libro("Julio Verne", "El piloto del Danubio", "Editorial1"));
-		lLibros.add(new Libro("Gabriel García Marquez", "Cien años de soledad", "Editorial1"));
+		lLibros.add(new Libro("Gabriel Garcia Marquez", "Cien aÃ±os de soledad", "Editorial1"));
 		lLibros.add(new Libro("Miguel de Cervantes", "Don Quijote de la Mancha", "Editorial2"));
 		lLibros.add(new Libro("William Shakespeare", "Hamlet", "Editorial3"));
-		lLibros.add(new Libro("Antoine de Saint Exupéry", "El principito", "Editorial2"));
-		lLibros.add(new Libro("Margaret Mitchell", "Lo que el viento se llevó", "Editorial1"));
+		lLibros.add(new Libro("Antoine de Saint Exupery", "El principito", "Editorial2"));
+		lLibros.add(new Libro("Margaret Mitchell", "Lo que el viento se llevo", "Editorial1"));
 		lLibros.add(new Libro("Herman Melville", "Moby-Dick", "Editorial1"));
-		lLibros.add(new Libro("Charles Lutwidge", "Alicia en el país de las maravillas", "Editorial2"));
-		lLibros.add(new Libro("J.R.R Tolkiee", "El señor de los anillos", "Editorial3"));
+		lLibros.add(new Libro("Charles Lutwidge", "Alicia en el pais de las maravillas", "Editorial2"));
+		lLibros.add(new Libro("J.R.R Tolkiee", "El seÃ±or de los anillos", "Editorial3"));
 		lLibros.add(new Libro("Jonathan Swift", "Los viajes de Gulliver", "Editorial2"));
 		ArrayList<Cliente> lClientes = new ArrayList<Cliente>();
 		lClientes.add(new Cliente("Cliente uno", 28937137, "cliente@uno", "direccion cliente uno"));
