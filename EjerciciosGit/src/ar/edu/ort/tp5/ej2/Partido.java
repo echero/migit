@@ -68,7 +68,8 @@ public class Partido {
 		evento = eventos.poll();
 		System.out.println("Empieza el partido.");
 		while(evento.getMinuto()!=-1) {
-			System.out.print(evento.getMinuto()+" ");
+			String equipo = equipos[evento.getEquipo().ordinal()].getNombre(); 
+			System.out.print(evento.getMinuto()+"', "+evento.getEquipo()+"("+equipo+"): ");
 			Cambio cambio = esCambio(evento);
 			if(cambio!=null) {
 				System.out.println(cambio);		
