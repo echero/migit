@@ -3,7 +3,7 @@ package tp1.tp4.util;
 import java.util.Scanner;
 
 public class LectorEnteros {
-	private static final String MENSAJE_ERROR_SCANNER_NULL = "Debe recibirse un Scanner.";
+	private static final String MENSAJE_ERROR_SCANNER_NULL = "No puede estar vacio el campo ingresado";
 	private static final String MENSAJE_ERROR_RANGO_NULL = "El rango no debe ser null.";
 	private static final String MENSAJE_CARGA_ENTERO = "Ingrese un numero entero cualquiera";
 	private static final String MENSAJE_ERROR_CARGA = "Error en la carga! ";
@@ -15,16 +15,19 @@ public class LectorEnteros {
 
 	private Scanner scanner;
 
+
+	public LectorEnteros(Scanner scanner) {
+		//Completar
+		if (scanner== null){
+			throw new IllegalArgumentException(MENSAJE_ERROR_SCANNER_NULL);
+		}
+		this.scanner = scanner;
+	}
+	
 	private int cargar(String mensaje) {
 		System.out.printf(MASCARA_MENSAJE_CARGA_ENTERO, mensaje);
-		return Integer.parseInt(scanner.nextLine());
-	}
-	public LectorEnteros(Scanner scanner) {
-	
-		//Completar
-		if (scanner == null)
-			throw new IllegalArgumentException(MENSAJE_ERROR_SCANNER_NULL);
-		this.scanner = scanner;
+		int numero = Integer.parseInt(scanner.nextLine());
+		return numero;
 	}
 
 	public int pedir(String mensaje) {
@@ -46,7 +49,7 @@ public class LectorEnteros {
 			throw new NullPointerException();
 		do {
 			num = pedir(mensaje);
-		}while(num<rangoValido.getLimiteInferior() || num>rangoValido.getLimiteSuperior());
+		}while((num<rangoValido.getLimiteInferior() || num>rangoValido.getLimiteSuperior()) && num!=-1);
 
 		return num;
 	}
@@ -64,7 +67,9 @@ public class LectorEnteros {
 		// Completar
 		num = pedir(mensaje, rango);
 		if( num == valorFinCarga )
-			System.out.println("La persona aún vive");
+			//System.out.println("La edad es: " +(rango.getLimiteSuperior()-rango.getLimiteInferior()));
+			System.out.println("La persona aun vive");
+			
 		return num;
 	}
 // OPCIONALES 

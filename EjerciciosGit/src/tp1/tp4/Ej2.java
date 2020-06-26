@@ -17,10 +17,10 @@ public class Ej2 {
 				numero = input.nextInt();
 				hayError = false;
 			} catch (InputMismatchException e) {
-				System.out.println("Ingreso un valor no numérico");
+				System.out.println("Error...Ingreso un valor no numerico");
 				input.nextLine();
 			}finally {
-				System.out.println("El número ahora vale " +numero);
+				System.out.println("El numero ahora vale " +numero);
 			}
 		}while(hayError);
 		

@@ -18,16 +18,28 @@ public class Test {
 			numero = le.pedir();
 			nacimiento = le.pedir("Ingrese fecha de naciemiento: ", 1900, anioActual);
 			fallecimiento = le.pedir("Ingrese fecha de fallecimiento: ", nacimiento, anioActual); 
+			if(fallecimiento== -1){
+				System.out.println("La persona aun vive");
+				System.out.println("La edad es: "+(anioActual-nacimiento));
+			}
+			else{
+				System.out.println("La persona fallecio");
+				System.out.println("La edad de fallecimiento seria de: "+(fallecimiento - nacimiento));
+			}
 		} catch (NumberFormatException e) {
-			System.out.println(e.getMessage());
+			System.out.println("Error no puede dejar el campo vacio "+e.getMessage());
 		} catch (IllegalArgumentException e) {
-			System.out.println("No ingresó un número");
+			System.out.println("No ingreso un numero");
+		}catch (NullPointerException e){
+			System.out.println(e.getMessage());
 		}
+		
+		
 		/*
 		try {
-			le.pedir("Ingrese un número entero");
+			le.pedir("Ingrese un nï¿½mero entero");
 		} catch (InputMismatchException e) {
-			System.out.println("Debió ingresar un número");
+			System.out.println("Debiï¿½ ingresar un nï¿½mero");
 		}
 		input.nextLine();
 		try {
@@ -38,6 +50,7 @@ public class Test {
 		} 
 		le.pedir("Ingrese la nota del alumno",0,10);
 		*/
+		
 		input.close();
 	}
 }
