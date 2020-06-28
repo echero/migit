@@ -22,24 +22,29 @@ public class Partido {
 		Equipo equipo = obtenerEquipo(equipos, evento);
 		Cambio cambio = esCambio(evento);
 		Jugador jugador = obtenerJugador(evento);
-		if(cambio!=null) {
-			Jugador entra = equipo.existeJugadorEnPlantel(cambio.getEntra());
-			Jugador sale = jugador;
-			procesarCambio(cambio, entra, sale);
-		}
-			
-		Gol gol =esGol(evento);
-		if(gol!=null) {
-			procesarGol(gol, jugador);
-			int i = obtenerLocalOVisitante(evento);
-			if(!gol.isFueEncontra()) {
-				this.goles[i]++;
-			}else {
-				if(i==0)
-					this.goles[1]++;
-				else
-					this.goles[0]++;
+		if(jugador!=null) {
+			if(cambio!=null) {
+				Jugador entra = equipo.existeJugadorEnPlantel(cambio.getEntra());
+				Jugador sale = jugador;
+				procesarCambio(cambio, entra, sale);
 			}
+				
+			Gol gol =esGol(evento);
+			if(gol!=null) {
+				procesarGol(gol, jugador);
+				int i = obtenerLocalOVisitante(evento);
+				if(!gol.isFueEncontra()) {
+					this.goles[i]++;
+				}else {
+					if(i==0)
+						this.goles[1]++;
+					else
+						this.goles[0]++;
+				}
+		}else {
+			System.out.println("ERROR: el jugador no existe en el plantel indicado");
+		}
+		
 			
 		}
 
@@ -129,7 +134,7 @@ public class Partido {
 			Gol gol =esGol(evento);
 			if(gol!=null) {
 				String penal = (gol.isFueDePenal())?" de penal: ":"";
-				String encontra = (gol.isFueEncontra())?"ENCONTRA: ":": ";
+				String encontra = (gol.isFueEncontra())?" ENCONTRA: ":": ";
 				System.out.print("GOL"+ penal + encontra);
 			}
 			Tarjeta tarjeta = esTarjeta(evento);

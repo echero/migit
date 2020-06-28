@@ -60,8 +60,9 @@ public class JugarPartido {
 		Tarjeta t4 = new Tarjeta(82, LocalVisitante.LOCAL, 2, ColorTarjeta.AMARILLA);
 		Tarjeta t5 = new Tarjeta(86, LocalVisitante.VISITANTE, 16, ColorTarjeta.AMARILLA);
 		Cambio c4 = new Cambio(88, LocalVisitante.VISITANTE, 8, 5);
-		Gol g3 = new Gol(89, LocalVisitante.LOCAL, 17, true, false);
-		Gol g4 = new Gol(90, LocalVisitante.LOCAL, 17, false, true);
+		Gol g3 = new Gol(89, LocalVisitante.VISITANTE, 17, true, false);
+		Gol g4 = new Gol(90, LocalVisitante.VISITANTE, 17, false, true);
+		Gol g5 = new Gol(90, LocalVisitante.LOCAL, 17, false, true);
 		p.agregarEvento(t1);
 		p.agregarEvento(t2);
 		p.agregarEvento(g1);
@@ -75,6 +76,7 @@ public class JugarPartido {
 		p.agregarEvento(c4);
 		p.agregarEvento(g3);
 		p.agregarEvento(g4);
+		p.agregarEvento(g5);
 		p.mostrarEventos();
 
 	}
