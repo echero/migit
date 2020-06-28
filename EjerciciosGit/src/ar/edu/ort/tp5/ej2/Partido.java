@@ -77,6 +77,7 @@ public class Partido {
 			Gol gol =esGol(evento);
 			if(gol!=null) {
 				System.out.println(gol);
+				System.out.println("Resultado parcial "+goles[0]+"-"+goles[1]);
 			}
 			Tarjeta tarjeta = esTarjeta(evento);
 			if(tarjeta!=null) {
@@ -85,9 +86,9 @@ public class Partido {
 			eventos.add(evento);
 			evento = eventos.poll();
 		}
-		System.out.println("Resultado parcial "+goles[0]+"-"+goles[1]);
+		mostrarResultado();
 	}
-	public void mostrarResultado(){
+	private void mostrarResultado(){
 		System.out.println("Resultado final "+goles[0]+"-"+goles[1]);
 	}
 	@Override
