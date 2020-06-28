@@ -51,15 +51,17 @@ public class JugarPartido {
 		Partido p = new Partido("Final de copa Libertadores 2018", river, boca);
 		Tarjeta t1 = new Tarjeta(26, LocalVisitante.LOCAL, 23, ColorTarjeta.AMARILLA);
 		Tarjeta t2 = new Tarjeta(42, LocalVisitante.VISITANTE, 8, ColorTarjeta.AMARILLA);
-		Gol g1 = new Gol(43, LocalVisitante.VISITANTE, 18, false);
+		Gol g1 = new Gol(43, LocalVisitante.VISITANTE, 18, false,false);
 		Cambio c1 = new Cambio(57, LocalVisitante.LOCAL, 23, 8);
 		Cambio c2 = new Cambio(61, LocalVisitante.VISITANTE, 18, 17);
-		Gol g2 = new Gol(67, LocalVisitante.LOCAL, 27, false);
+		Gol g2 = new Gol(67, LocalVisitante.LOCAL, 27, false,false);
 		Cambio c3 = new Cambio(57, LocalVisitante.LOCAL, 29, 18);
 		Tarjeta t3 = new Tarjeta(80, LocalVisitante.LOCAL, 26, ColorTarjeta.AMARILLA);
 		Tarjeta t4 = new Tarjeta(82, LocalVisitante.LOCAL, 2, ColorTarjeta.AMARILLA);
 		Tarjeta t5 = new Tarjeta(86, LocalVisitante.VISITANTE, 16, ColorTarjeta.AMARILLA);
 		Cambio c4 = new Cambio(88, LocalVisitante.VISITANTE, 8, 5);
+		Gol g3 = new Gol(89, LocalVisitante.LOCAL, 17, true, false);
+		Gol g4 = new Gol(90, LocalVisitante.LOCAL, 17, false, true);
 		p.agregarEvento(t1);
 		p.agregarEvento(t2);
 		p.agregarEvento(g1);
@@ -71,9 +73,8 @@ public class JugarPartido {
 		p.agregarEvento(t4);
 		p.agregarEvento(t5);
 		p.agregarEvento(c4);
-		//p.agregarEvento();
-		p.mostrarEventos();
-		System.out.println("**************");
+		p.agregarEvento(g3);
+		p.agregarEvento(g4);
 		p.mostrarEventos();
 
 	}

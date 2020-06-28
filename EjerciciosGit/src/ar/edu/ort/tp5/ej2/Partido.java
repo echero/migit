@@ -31,7 +31,16 @@ public class Partido {
 		Gol gol =esGol(evento);
 		if(gol!=null) {
 			procesarGol(gol, jugador);
-			this.goles[obtenerLocalOVisitante(evento)]++;
+			int i = obtenerLocalOVisitante(evento);
+			if(!gol.isFueEncontra()) {
+				this.goles[i]++;
+			}else {
+				if(i==0)
+					this.goles[1]++;
+				else
+					this.goles[0]++;
+			}
+			
 		}
 
 		Tarjeta tarjeta = esTarjeta(evento);
@@ -41,7 +50,12 @@ public class Partido {
 	}
 	private void procesarCambio(Cambio cambio, Jugador entra, Jugador sale) {
 		if(entra!=null&&sale!=null) {
-			eventos.add(cambio);
+			if(entra.getCamisetaNro()!=sale.getCamisetaNro())
+				eventos.add(cambio);
+			else
+				System.out.println("ERROR: no puede tener el mismo número de camiseta el jugador que entra y el que sale");
+		}else {
+			System.out.println("ERROR: Uno o los 2 jugadores involucrados en el cambio no existe en el plantel");
 		}
 
 	}
@@ -98,6 +112,10 @@ public class Partido {
 		Evento evento;
 		eventos.add(centinela);
 		evento = eventos.poll();
+		System.out.println("============================================");
+		System.out.println(descripcion);
+		System.out.println("============================================");
+		System.out.println(equipos[0].getNombre()+" vs "+equipos[1].getNombre());
 		System.out.println("Empieza el partido.");
 		while(evento.getMinuto()!=-1) {
 			String entra="";
@@ -110,8 +128,9 @@ public class Partido {
 			}
 			Gol gol =esGol(evento);
 			if(gol!=null) {
-				String penal = (gol.isFueDePenal())?"de penal: ":"de jugada: ";
-				System.out.print("Gol "+ penal);
+				String penal = (gol.isFueDePenal())?" de penal: ":"";
+				String encontra = (gol.isFueEncontra())?"ENCONTRA: ":": ";
+				System.out.print("GOL"+ penal + encontra);
 			}
 			Tarjeta tarjeta = esTarjeta(evento);
 			if(tarjeta!=null) {
