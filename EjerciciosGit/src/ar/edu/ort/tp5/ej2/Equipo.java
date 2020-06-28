@@ -54,7 +54,7 @@ public class Equipo {
 		return estaDisponible;
 	}
 	
-	private Jugador existeJugadorEnPlantel(int camisetaNro) {
+	public Jugador existeJugadorEnPlantel(int camisetaNro) {
 		Jugador jugadorBuscado = null;
 		Jugador jugadorAux = null;
 		int i = 0;
